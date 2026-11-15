@@ -182,8 +182,13 @@ st.caption("తేదీ, సమయం మరియు నగరం ఆధార
 
 with st.form("panchangam_form"):
     col1, col2 = st.columns(2)
+    
     with col1:
-        selected_date = st.date_input("తేదీ (Date)", value=date.today())
+        current_year = date.today().year
+        min_date = date(current_year - 100, 1, 1)
+        max_date = date(current_year + 100, 12, 31)
+        selected_date = st.date_input("తేదీ (Date)", value=date.today(), min_value=min_date, max_value=max_date)
+        
     with col2:
         selected_time = st.time_input("సమయం (Time)", value=datetime.now().time())
     
