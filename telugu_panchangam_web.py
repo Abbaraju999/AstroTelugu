@@ -232,15 +232,9 @@ if submitted:
         st.subheader("సూర్యోదయం & కాలాలు")
         col_a, col_b = st.columns(2)
         with col_a:
-            st.info(f"🌅 **సూర్యోదయం:** {format_time(sr)}
-
-🌇 **సూర్యాస్తమయం:** {format_time(ss)}")
+            st.info(f"🌅 **సూర్యోదయం:** {format_time(sr)}\n\n🌇 **సూర్యాస్తమయం:** {format_time(ss)}")
         with col_b:
-            st.warning(f"⏳ **రాహుకాలం:** {rahu}
-
-⏳ **యమగండం:** {yama}
-
-⏳ **గుళిక కాలం:** {gulika}")
+            st.warning(f"⏳ **రాహుకాలం:** {rahu}\n\n⏳ **యమగండం:** {yama}\n\n⏳ **గుళిక కాలం:** {gulika}")
 
     except Exception as e:
         st.error(f"లోపం (Error): {e}")
